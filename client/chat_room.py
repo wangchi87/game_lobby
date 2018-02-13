@@ -235,6 +235,6 @@ class Room(Toplevel):
     def display_new_msg(self, user_name, msg, config=''):
         self.text_msg_List['state'] = 'normal'
         msg_time = time.strftime(" %Y-%m-%d %H:%M:%S", time.localtime()) + '\n'
-        self.text_msg_List.insert(END, user_name + ': ' + msg_time + msg, config)
+        self.text_msg_List.insert(END, user_name + ': ' + msg_time + msg + '\n', config)
         self.text_msg_List['state'] = 'disabled'
 
